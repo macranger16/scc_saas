@@ -3,18 +3,20 @@
     <h3>A membership site where entrepreneurs can meet developers.</h3>
 </div>
 <div class="row">
-    <div class="col-mid-6">
+    <div class="col-md-6">
        <div class="well">
         <h2 class="text-center">Basic Membership</h2>
+        
         <h4 class="text-center">Sign up for free and get basic access to our community</h4>
-        <%= link_to "Sign up with Basic", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block'%>
+        <br>
+        <%= link_to "Sign up with Basic", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block'%>
        </div> 
     </div>
-    <div class="col-mid-6">
+    <div class="col-md-6">
        <div class="well">
         <h2 class="text-center">Pro Membership</h2>
         <h4 class="text-center">Sign up for the pro account for $10 a month and get full access to our community PLUS contact information!</h4>
-        <%= link_to "Sign up with Pro", new_user_registration_path, class: 'btn btn-success btn-lg btn-block'%>
+        <%= link_to "Sign up with Pro", new_user_registration_path(plan: @pro_plan.id), class: 'btn btn-success btn-lg btn-block'%>
        </div> 
     </div>
 </div>
