@@ -10,16 +10,16 @@ $(document).ready(function() {
             expMonth = $('#card_month').val(),
             expYear = $('#card_year').val(),
             
-        if (!error){
-            //Get the Stripe token:
-            Stripe.createToken({
-                number: ccNum,
-                cvc: cvcNum,
-                exp_month: expMonth,
-                expYear: expYear,
-            }, stripeResponseHolder);
-        }  
-        return false;
+        if (!error) {
+          //Get the Stripe token:
+          Stripe.createToken({
+           number: ccNum,
+           cvc: cvcNum,
+           exp_month: expMonth,
+           expYear: expYear,
+         }, stripeResponseHolder);
+       }  
+       return false;
     }); //form submission
     
     function stripeResponseHolder(status, response) {
